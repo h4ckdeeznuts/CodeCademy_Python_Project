@@ -62,10 +62,8 @@ def get_attractions_for_traveler(traveler):
   traveler_attractions = find_attractions(traveler_destination, traveler_interests)
 
   interests_string = "Hi "+traveler[0]+", we think you'll like these places around " + traveler_destination + ": "
-  """ IF LAST ATTRACTION IN LIST ADD A PERIOD, ELSE ADD A COMMA PLUS A SPACE """
+  #Some grammatical correction logic
   for i in range(len(traveler_attractions)):
-    """ EXTRA LOGIC TO SEE IF THE ATTRACTION WE ARE ON IS THE LAST ONE<
-    IF IT IS FORMAT THEN INTERESTS_STRING_DIFFERENTLY """
     if traveler_attractions[-1] == traveler_attractions[i]:
       interests_string += "the "+traveler_attractions[i]+"."
     else:
